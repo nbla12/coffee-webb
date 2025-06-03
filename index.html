@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coffee Time</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Coffee Time</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Products</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <h2 style="text-align: center;
+   font-family: sans-serif;
+    margin-top: 80px ; 
+    color: #ffffff;">
+    Our Coffee Menu
+  </h2>
+
+  <section class="products fade-in">
+    <div class="product-item fade-in">
+      <img src="Cappuccino.jfif" 
+      alt="Cappuccino" />
+      <h3>
+        Cappuccino
+      </h3>
+      <p>
+        A creamy cappuccino made with espresso and rich milk foam, ideal for
+        coffee lovers with a balanced taste and smooth texture.
+      </p>
+    </div>
+
+    <div class="product-item fade-in">
+      <img src="Download free image of An isolated plastic cup of an ice macchiato coffee drink beverage refreshing_ about background, plastic, food, coffee cup, and coffee 15542127.jfif"
+       alt="Ice Coffee" />
+      <h3>
+        Ice Coffee
+      </h3>
+      <p>
+        A refreshing iced coffee that combines cold espresso with milk or cold water,
+        offering a cool and refreshing taste perfect for hot summer days.
+      </p>
+    </div>
+
+    <div class="product-item fade-in">
+      <img src="Shaken Dark Chocolate Turkish Coffee With Whipped Cream.jfif" 
+      alt="Turkish coffee" />
+      <h3>
+        Turkish Coffee
+      </h3>
+      <p>
+        Turkish coffee is rich in flavor and prepared in the traditional way by
+        grinding the coffee beans very finely and boiling them slowly with water and
+        sugar to taste. It is served with a thick foam and a strong, distinctive taste.
+      </p>
+    </div>
+
+    <div class="product-item fade-in">
+      <img src="Affogato Coffee.jfif" 
+      alt="Affogato Coffee" />
+      <h3>
+        Affogato Coffee
+      </h3>
+      <p>
+        Vanilla ice cream is generally topped with a clear espresso shot – dessert and coffee in one.
+      </p>
+    </div>
+
+    <div class="product-item fade-in">
+      <img src="Salted Caramel Macchiato.jfif"
+       alt="Macchiato Coffee" />
+      <h3>
+        Macchiato Coffee
+      </h3>
+      <p>
+        Espresso with a small drop of milk added, strong in flavor and preferred by lovers of strong coffee.
+      </p>
+    </div>
+
+    <div class="product-item fade-in">
+      <img src="Speciality Coffee at Embassy East in Hoxton - Mondomulia.jfif"
+       alt="Flat White Coffee" />
+      <h3>
+        Flat White Coffee
+      </h3>
+      <p>
+        A mixture of espresso and steamed milk, like a latte but with a lighter,
+        smoother layer of foam.
+      </p>
+    </div>
+  </section>
+
+  <section class="about-my fade-in">
+    <h2>
+      Who are we?
+    </h2>
+    <p>
+      At Coffee Time, we believe that a good cup of coffee can make your day better.
+      We work passionately to serve the finest coffee in a relaxed, comfortable atmosphere,
+      as if you were at home. Your visit to us is more than just coffee; it's a complete
+      experience of comfort and warmth.
+    </p>
+  </section>
+   <hr>
+  
+  <section>
+    <div class="banner fade-in">
+      <img src="coffee time (2).png" 
+      alt="delivery" />
+      <p class="order">
+        You can order now
+      </p>
+    </div>
+  </section>
+
+  <hr />
+
+  <section class="contact-section fade-in">
+    <h2>
+      Contact us easily for any inquiries or complaints.
+    </h2>
+    <div class="contact-buttons fade-in">
+      <a href="https://wa.me/رقمك"
+       target="_blank" 
+       class="contact-btn whatsapp">
+        <img src="Baixe Vetores, Imagens, Fotos e Vídeos Gratuitos.jfif" 
+        alt="WhatsApp" />
+        WhatsApp
+      </a>
+      <a href="mailto:youremail@example.com"
+       class="contact-btn email">
+        <img src="Address book, contacts, email, gmail, mail icon - Free download.jfif"
+         alt="Email" />
+        Email
+      </a>
+      <a href="tel:+123456789"
+       class="contact-btn phone">
+        <img src="8bff3385-13cf-4fee-9345-10d918b22697.jfif" 
+        alt="Phone" />
+        Phone
+      </a>
+    </div>
+  </section>
+
+  <script>
+    const faders = document.querySelectorAll(".fade-in");
+
+    const appearOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const appearOnScroll = new IntersectionObserver(function (entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+      appearOnScroll.observe(fader);
+    });
+  </script>
+</body>
+</html>
